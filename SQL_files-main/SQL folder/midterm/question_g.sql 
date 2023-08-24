@@ -1,0 +1,5 @@
+
+  SELECT DISTINCT loc_name
+	FROM locations,rewardees,reward_accounts,customers
+	WHERE customers.cust_city='Harrison'
+	ORDER BY loc_name ASC;

@@ -1,0 +1,13 @@
+SELECT DISTINCT cust_name
+	FROM customers AS c, rewardees AS r, reward_accounts AS ra
+	WHERE c.cust_ID= r.cust_ID
+	AND r.account_ID= ra.account_ID
+	AND ra.reward_balance > some
+	(
+		SELECT reward_balance
+		FROM customers AS c,rewardees AS r, reward_accounts AS ra
+		WHERE c.cust_city='Bronx'
+		AND c.cust_ID=r.cust_ID
+		AND r.account_ID=ra.account_ID
+	)
+	ORDER BY cust_name ASC

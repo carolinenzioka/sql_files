@@ -1,0 +1,7 @@
+
+
+SELECT DISTINCT b.cust_ID, c.cust_name
+FROM loan_accounts AS l,borrowers AS b,customers AS c
+WHERE c.cust_ID = b.cust_ID
+AND b.loan_ID= l.loan_ID
+AND loan_amount = (SELECT MAX(loan_amount)FROM loan_accounts )

@@ -1,0 +1,4 @@
+SELECT l.loc_city,SUM(reward_balance)
+	FROM reward_accounts ra,locations l
+	GROUP BY l.loc_city
+	HAVING SUM (reward_balance) > 8000.00

@@ -1,0 +1,7 @@
+
+
+  SELECT DISTINCT  borrowers.cust_ID, customers.cust_name
+	FROM customers,borrowers,rewardees
+	WHERE borrowers.cust_ID = customers.cust_ID
+	AND borrowers.cust_ID <> rewardees.cust_ID
+	ORDER BY cust_name ASC;

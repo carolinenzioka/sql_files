@@ -1,0 +1,6 @@
+
+SELECT DISTINCT cust_ID, cust_name
+	FROM customers
+	WHERE cust_street = '123 Easy Street'
+	AND cust_city = 'Bronx'
+	ORDER BY cust_ID DESC;

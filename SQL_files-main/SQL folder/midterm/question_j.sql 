@@ -1,0 +1,2 @@
+SELECT SUM(loan_amount)
+FROM loan_accounts

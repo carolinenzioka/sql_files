@@ -1,0 +1,9 @@
+
+SELECT DISTINCT customers.cust_ID, cust_name
+	FROM locations, customers
+	FULL OUTER JOIN rewardees AS r
+	ON customers.cust_ID = r.cust_ID
+	FULL OUTER JOIN reward_accounts AS ra
+	ON ra.account_ID = r.account_ID
+	WHERE ra.loc_ID = 12345 AND ra.loc_ID = 54321 AND ra.loc_ID = 74185
+	ORDER BY cust_ID ASC;

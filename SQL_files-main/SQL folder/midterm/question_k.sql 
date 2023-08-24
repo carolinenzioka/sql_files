@@ -1,0 +1,3 @@
+	SELECT 
+	CAST(COUNT(account_ID)/ COUNT(cust_ID)AS DECIMAL(7,4))AS decimal_value
+	FROM customers,reward_accounts;
