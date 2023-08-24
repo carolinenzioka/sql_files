@@ -1,5 +1,4 @@
 /*
-    Name: Roshane Bent
     CSCI250: Databases
     Midterm Exam
     Spring 2022
